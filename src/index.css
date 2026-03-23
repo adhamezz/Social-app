@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --radius-circle: 50%;
+  --font-cairo: "Cairo Variable", sans-serif;
+}
+
+@layer base {
+  span,
+  a,
+  label {
+    display: inline-block;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer px-4 py-2 rounded-xl  space-x-1  border border-gray-400/30;
+  }
+
+  .form-control {
+    @apply px-4 py-3 pl-11 rounded-xl bg-gray-100 w-full focus:outline-none 
+    border border-gray-400/40  focus:border-blue-600 transition-colors duration-200;
+  }
+}
